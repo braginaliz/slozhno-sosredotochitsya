@@ -5,18 +5,41 @@
 */
 
 .page.theme_light {
-  --text-color: var(--color-black-2, #353430);
-  --decoration-color: var( --color-pink-3, #ffc2e6);
-  --menu-color: var(--color-black-2, #353430);
-  --accent-color: var(--color-purple-2, #ff0070);
-  --title-color: var(--color-black-1, #000028);
-  --description-title-color: var(--color-black-1, #000028);
-  --description-color: var( --color-pink-4, #ff8dcb);
+  --text-color: var(--color-black-second, #353430);
+  --decoration-color: var(--color-pink-third, #ffc2e6);
+  --menu-color: var(--color-black-second, #353430);
+  --menu-hover-color: var(--color-black-third, #32312d66);
+  --accent-color: var(--color-purple-second, #ff0070);
+  --title-color: var(--color-black-first, #000028);
+  --description-title-color: var(--color-black-first, #000028);
+  --description-color: var(--color-pink-forth, #ff8dcb);
+  --link-color: var(--color-black-second, #353430);
+  --decorated-zone-color: var(--color-black-second, #353430);
 
-  --font-family: "IBM Plex mono", sans-serif;
+  --font-family: "IBM Plex mono", monospace;
   --page-background-image: url("../images/cover-image-light.png");
-  --page-background-color: var(--color-pink-3, #ffc2e6);
+  --page-background-color: var(--color-pink-third, #ffc2e6);
 
   --record-decor-visibility: hidden;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: var(--color-black-second, #353430);
+    --decoration-color: var(--color-pink-third, #ffc2e6);
+    --menu-color: var(--color-black-second, #353430);
+    --menu-hover-color: var(--color-black-third, #32312d66);
+    --accent-color: var(--color-purple-second, #ff0070);
+    --title-color: var(--color-black-first, #000028);
+    --description-title-color: var(--color-black-first, #000028);
+    --description-color: var(--color-pink-forth, #ff8dcb);
+    --link-color: var(--color-black-second, #353430);
+    --decorated-zone-color: var(--color-black-second, #353430);
+
+    --font-family: "IBM Plex mono", monospace;
+    --page-background-image: url("../images/cover-image-light.png");
+    --page-background-color: var(--color-pink-third, #ffc2e6);
+
+    --record-decor-visibility: hidden;
+  }
+}

@@ -1,30 +1,33 @@
 :root {
+  --color-pink-first: #fff1f7;
+  --color-pink-second: #f1b2ce;
+  --color-pink-third: #ffc2e6;
+  --color-pink-forth: #ff8dcb;
+  --color-pink-fifth: #ff007066;
 
-  --color-pink-1: #fff1f7;
-  --color-pink-2: #f1b2ce;
-  --color-pink-3: #ffc2e6;
-  --color-pink-4: #ff8dcb;
+  --color-purple-first: #db00ff;
+  --color-purple-second: #ff0070;
+  --color-purple-third: #ff007040;
 
-  --color-purple-1: #db00ff;
-  --color-purple-2: #ff0070;
-  --color-purple-3: #ff007040;
+  --color-black-first: #000028;
+  --color-black-second: #353430;
+  --color-black-third: #32312d66;
 
-  --color-black-1: #000028;
-  --color-black-2: #353430;
+  --text-color: var(--color-black-second, #353430);
+  --decoration-color: var(--color-pink-third, #ffc2e6);
+  --menu-color: var(--color-black-second, #353430);
+  --menu-hover-color: var(--color-black-third, #32312d66);
+  --accent-color: var(--color-purple-second, #ff0070);
+  --title-color: var(--color-black-first, #000028);
+  --description-color: var(--color-pink-forth, #ff8dcb);
+  --description-title-color: var(--color-black-first, #000028);
+  --section-title-color: var(--color-black-first, #000028);
+  --link-color: var(--color-black-second, #353430);
+  --decorated-zone-color: var(--color-black-second, #353430);
 
-
-  --text-color: var(--color-black-2, #353430);
-  --decoration-color: var( --color-pink-3, #ffc2e6);
-  --menu-color: var(--color-black-2, #353430);
-  --accent-color: var(--color-purple-2, #ff0070);
-  --title-color: var(--color-black-1, #000028);
-  --description-color: var( --color-pink-4, #ff8dcb);
-  --description-title-color: var(--color-black-1, #000028);
-  --section-title-color: var(--color-black-1, #000028);
-
-  --font-family: "IBM Plex mono", sans-serif;
+  --font-family: "IBM Plex mono", monospace;
   --page-background-image: url("../images/cover-image-light.png");
-  --page-background-color: var(--color-pink-1, #fff1f7);
+  --page-background-color: var(--color-pink-first, #fff1f7);
 
   --record-decor-visibility: hidden;
 }

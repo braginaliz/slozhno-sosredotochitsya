@@ -5,18 +5,43 @@
 */
 
 .page.theme_dark {
-  --text-color: var(--color-pink-2, #f1b2ce);
-  --decoration-color: var(--color-purple-1, #db00ff);
-  --menu-color: var(--color-purple-2, #ff0070);
-  --accent-color: var(--color-purple-2, #ff0070);
-  --title-color:var(--color-purple-2, #ff0070);
-  --description-color: var(--color-purple-2, #ff0070);
-  --description-title-color: var(--color-black-1, #000028);
-  --section-title-color: var(--color-purple-2, #ff0070);
+  --text-color: var(--color-pink-second, #f1b2ce);
+  --decoration-color: var(--color-purple-first, #db00ff);
+  --menu-color: var(--color-purple-second, #ff0070);
+  --menu-hover-color: var(--color-black-fifth, #ff007066);
+  --accent-color: var(--color-purple-second, #ff0070);
+  --title-color: var(--color-purple-second, #ff0070);
+  --description-color: var(--color-purple-second, #ff0070);
+  --description-title-color: var(--color-black-first, #000028);
+  --section-title-color: var(--color-purple-second, #ff0070);
+  --link-color: var(--color-pink-second, #f1b2ce);
+  --decorated-zone-color: var(--color-purple-second, #ff0070);
 
-  --font-family: "IBM Plex mono", sans-serif;
+  --font-family: "IBM Plex mono", monospace;
   --page-background-image: url("../images/cover-image-dark.png");
-  --page-background-color: var(--color-black-1, #000028);
+  --page-background-color: var(--color-black-first, #000028);
 
   --record-decor-visibility: visible;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: var(--color-pink-second, #f1b2ce);
+    --decoration-color: var(--color-purple-first, #db00ff);
+    --menu-color: var(--color-purple-second, #ff0070);
+    --menu-hover-color: var(--color-black-fifth, #ff007066);
+    --accent-color: var(--color-purple-second, #ff0070);
+    --title-color: var(--color-purple-second, #ff0070);
+    --description-color: var(--color-purple-second, #ff0070);
+    --description-title-color: var(--color-black-first, #000028);
+    --section-title-color: var(--color-purple-second, #ff0070);
+    --link-color: var(--color-pink-second, #f1b2ce);
+    --decorated-zone-color: var(--color-purple-second, #ff0070);
+
+    --font-family: "IBM Plex mono", monospace;
+    --page-background-image: url("../images/cover-image-dark.png");
+    --page-background-color: var(--color-black-first #000028);
+
+    --record-decor-visibility: visible;
+  }
 }
