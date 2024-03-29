@@ -14,9 +14,9 @@
 
 /* header */
 .header {
-  display: grid;
-  grid-template-rows: 1fr min-content 1fr;
   position: relative;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr auto;
   align-items: start;
   min-block-size: 768px;
   height: 100vh;
@@ -25,7 +25,6 @@
 .header__theme-menu {
   justify-self: center;
   margin-block: 20px;
-  height: min-content;
 }
 
 .header__theme-menu-list {
@@ -98,11 +97,8 @@
 
 .header__decorated-zone {
   display: grid;
-  background-image: url(./images/cover-image.png);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 768px;
-  height: 100vh;
 }
 
 .decoration {
@@ -119,20 +115,17 @@
   transform: translate(0, -50%);
 }
 
-.description {
+.description_title {
   color: var(--description-title-color, #000028);
   margin-right: 20px;
-  max-height: 70px;
-  max-width: 491px;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 23px;
   inline-size: 50%;
   justify-self: end;
-  position: absolute;
-  top: 75%;
-  transform: translate(0, -25%);
+  margin-block-start: 435px;
+  max-inline-size: 491px;
 }
 
 .description_title {
@@ -293,7 +286,7 @@
 
 /* footer */
 
-footer {
+.footer {
   display: flex;
   place-items: center;
   justify-content: center;
@@ -348,9 +341,6 @@ footer {
     justify-self: end;
     margin-block-start: 190px;
     margin-right: 20px;
-  }
-
-  .header__theme-menu-list {
     display: flex;
     flex-direction: column;
   }
@@ -371,28 +361,17 @@ footer {
 
 @media (max-width: 375px) {
   .header {
-    display: grid;
-    grid-template-rows: repeat(3fr);
     align-items: center;
     padding: 10px;
-    height: 100vh;
   }
 
   .header__theme-menu {
-    justify-self: end;
     margin-block: 45px;
   }
-  
-  .header__theme-menu-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  
-  .description {
+
+  .description_title {
     margin-left: 10px;
     justify-self: start;
-    max-height: 117px;
     min-width: 355px;
   }
 
@@ -422,13 +401,10 @@ footer {
     display: grid;
     grid-template-rows: repeat(3fr);
     padding: 10px;
-    height: 100vh;
   }
-
 
   .footer_decoration {
     max-width: 355px;
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 }
-
