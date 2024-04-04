@@ -16,6 +16,7 @@
   --text-color: var(--color-black-second, #353430);
   --decoration-color: var(--color-pink-third, #ffc2e6);
   --menu-color: var(--color-black-second, #353430);
+  --menu-focus-color: var(--color-purple-second, #ff0070);
   --menu-hover-color: var(--color-black-third, #32312d66);
   --accent-color: var(--color-purple-second, #ff0070);
   --title-color: var(--color-black-first, #000028);

@@ -13,18 +13,19 @@
 }
 
 /* header */
+
 .header {
   position: relative;
   display: grid;
   grid-template-rows: 1fr auto 1fr auto;
+  justify-items: end;
   align-items: start;
-  min-block-size: 768px;
-  height: 100vh;
+  block-size: max(100vb, 668px);
 }
 
 .header__theme-menu {
   justify-self: center;
-  margin-block: 20px;
+  margin-block: 17px;
 }
 
 .header__theme-menu-list {
@@ -92,49 +93,13 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--menu-hover-color, #32312d66);
+  border-bottom: 1px solid var(--menu-focus-color, #353430);
 }
 
 .header__decorated-zone {
   display: grid;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.decoration {
-  font-family: var(--font-family, "IBM Plex mono", monospace);
-  font-size: 157px;
-  font-weight: 700;
-  line-height: 129px;
-  align-self: center;
-  text-align: left;
-  color: var(--decoration-color);
-  text-shadow: 4px 4px 0px var(--accent-color, #ff0070);
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-}
-
-.description_title {
-  color: var(--description-title-color, #000028);
-  margin-right: 20px;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 23px;
-  inline-size: 50%;
-  justify-self: end;
-  margin-block-start: 435px;
-  max-inline-size: 491px;
-}
-
-.description_title {
-  font-family: var(--font-family, "IBM Plex mono", monospace);
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 23.4px;
-  text-align: justify;
-  background-color: var(--description-color, #ff8dcb);
 }
 
 .record-decor {
@@ -145,6 +110,12 @@
   gap: 10px;
   inset-inline-end: 30px;
   inset-block-start: 20px;
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: center;
+
 }
 
 .record-decor::before {
@@ -164,19 +135,47 @@
   block-size: 9px;
 }
 
+.decoration {
+  font-family: var(--font-family, "IBM Plex mono", monospace);
+  font-size: 157px;
+  font-weight: 700;
+  line-height: 129px;
+  align-self: center;
+  justify-self: start;
+  color: var(--decoration-color);
+  text-shadow: 4px 4px 0px var(--accent-color, #ff0070);
+}
+
+.description_title {
+  max-inline-size: 491px;
+  color: var(--description-title-color, #000028);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px;
+  inline-size: 50%;
+  justify-self: end;
+  font-family: var(--font-family, "IBM Plex mono", monospace);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+  text-align: justify;
+  background-color: var(--description-color, #ff8dcb);
+  margin-block-start: 11%;
+  margin-inline-end: 20px;
+}
 /* main */
 
 .main {
   display: grid;
-  gap: 20px;
   padding: 20px 0px;
 }
 
 .section {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 20px;
-  padding: 0px 20px 0px 0px;
+  gap: 29px;
+  padding: 40px 20px 0px 0px;
 }
 
 .content-text-link {
@@ -208,6 +207,10 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
+}
+
+.dophamine-title {
+  margin-block-start: 20px;
 }
 
 .title-decor {
@@ -246,11 +249,27 @@
   margin-block-end: min(10px);
 }
 
+.what_section {
+  margin-block-start: 69px;
+}
+
+.how_section {
+  margin-block-start: 30px;
+}
+
+.subtitle_how {
+  margin-block-start: 20px;
+}
+
 .section_list-articles {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   padding: 20px 20px 0px 20px;
+}
+
+.section_gallery {
+  margin-block-start: 50px;
 }
 
 .section_gallery-title {
@@ -287,11 +306,11 @@
 /* footer */
 
 .footer {
+  margin-block-start: 20px;
   display: flex;
   place-items: center;
   justify-content: center;
   min-height: 768px;
-  height: 100vh;
 }
 
 .footer_decoration {
@@ -332,79 +351,169 @@
 }
 
 @media (max-width: 768px) {
-  .header__theme-menu-list {
-    display: block;
-    margin-block-end: 20px;
+  .record-decor {
+    inset-inline-end: 28px;
+    inset-block-start: 20px;
   }
 
   .header__theme-menu {
     justify-self: end;
-    margin-block-start: 190px;
-    margin-right: 20px;
+    margin-block-start: 25%;
+    margin-inline-end: 20px;
+  }
+
+  .header__theme-menu-list {
     display: flex;
     flex-direction: column;
-  }
-
-  .section_list-articles {
-    display: block;
-  }
-
-  .second-title {
-    margin-inline-start: min(20px);
-    margin-inline-end: min(512px);
-  }
-
-  .second__section_list {
-    display: block;
-  }
-}
-
-@media (max-width: 375px) {
-  .header {
+    gap: 14px;
     align-items: center;
-    padding: 10px;
-  }
-
-  .header__theme-menu {
-    margin-block: 45px;
-  }
-
-  .description_title {
-    margin-left: 10px;
-    justify-self: start;
-    min-width: 355px;
   }
 
   .decoration {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
+  .description_title {
+    margin-block-start: 150px;
+    inline-size: 47%;
+    text-align: left;
+  }
+
   .section {
+    gap: 37px;
+  }
+
+  .section_list-articles {
     display: block;
-    line-height: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
-  .section-content {
-    margin-left: 20px;
+  .what_main_paragraph_title {
+    width: 20%;
   }
 
-  .gallery-list {
-    display: block;
-    place-content: end;
+  .what_title {
+    margin-block-start: 20px;
   }
 
-  .gallery-list__item-img {
-    margin-block-start: 10px;
-  }
-
-  .footer__decorated-zone {
+  .how_section {
     display: grid;
-    grid-template-rows: repeat(3fr);
-    padding: 10px;
+    grid-template-columns: 35% 1fr;
+    gap: 15px;
   }
 
   .footer_decoration {
-    max-width: 355px;
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    margin: 58%;
+  }
+}
+
+@media (max-width: 375px) {
+  .header__theme-menu {
+    margin-block-start: 70px;
+  }
+
+  .description_title {
+    margin-inline-start: 10px;
+    margin-block-start: 55px;
+    inline-size: 355px;
+  }
+
+  .decoration {
+    justify-self: start;
+    inline-size: 355px;
+    margin-inline-start: 5px;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    line-height: 82.5%;
+  }
+
+  .main {
+    display: block;
+  }
+
+  .section {
+    padding: 20px 10px 10px 0px;
+    display: block;
+  }
+
+  .section_list {
+    margin-top: 20px;
+    display: grid;
+    grid-template-rows: 2fr;
+    gap: 15px;
+  }
+
+  .main_paragraph_title {
+    margin-left: 10px;
+  }
+
+  .what_main_paragraph_title {
+    inline-size: 355px;
+    margin-block-end: 20px;
+  }
+
+  .section-content {
+    padding-left: 10px;
+  }
+
+  .paragraph_description {
+    padding-bottom: 0;
+  }
+
+  .dophamine-title {
+    margin-top: 0;
+  }
+
+  .what_section {
+    margin-top: 30px;
+  }
+
+  .what_title {
+    margin-block-start: 10px;
+  }
+
+  .section_list-articles {
+    padding: 0px 10px;
+    display: grid;
+    grid-template-columns: 3fr;
+    gap: 0px;
+  }
+
+  .how_section {
+    padding: 0px 10px 0px 0px;
+  }
+
+  .how_main_paragraph_title {
+    margin-block-start: 35px;
+    min-width: 355px;
+  }
+
+  .title-decor {
+    margin-left: 10px;
+    margin-bottom: 0;
+  }
+
+  .section_gallery-title {
+    margin: 0px 10px 0px 10px;
+  }
+
+  .paragraph_description:last-child {
+    padding-bottom: 0;
+  }
+
+  .gallery-list {
+    margin: 10px;
+    display: block;
+  }
+
+  .gallery-list__item:nth-child(2),
+  .gallery-list__item:nth-child(3),
+  .gallery-list__item:nth-child(4),
+  .gallery-list__item:nth-child(5) {
+    padding-top: 10px;
+  }
+
+  .footer {
+    margin-block-start: 0px;
+    min-height: 668px;
   }
 }

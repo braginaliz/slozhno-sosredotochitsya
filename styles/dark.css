@@ -8,6 +8,7 @@
   --text-color: var(--color-pink-second, #f1b2ce);
   --decoration-color: var(--color-purple-first, #db00ff);
   --menu-color: var(--color-purple-second, #ff0070);
+  --menu-focus-color: var(--color-purple-second, #ff0070);
   --menu-hover-color: var(--color-black-fifth, #ff007066);
   --accent-color: var(--color-purple-second, #ff0070);
   --title-color: var(--color-purple-second, #ff0070);
@@ -29,6 +30,7 @@
     --text-color: var(--color-pink-second, #f1b2ce);
     --decoration-color: var(--color-purple-first, #db00ff);
     --menu-color: var(--color-purple-second, #ff0070);
+    --menu-focus-color: var(--color-purple-second, #ff0070);
     --menu-hover-color: var(--color-black-fifth, #ff007066);
     --accent-color: var(--color-purple-second, #ff0070);
     --title-color: var(--color-purple-second, #ff0070);
