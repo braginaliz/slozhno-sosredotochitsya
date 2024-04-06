@@ -22,7 +22,7 @@
   --title-color: var(--color-black-first, #000028);
   --description-color: var(--color-pink-forth, #ff8dcb);
   --description-title-color: var(--color-black-first, #000028);
-  --section-title-color: var(--color-black-first, #000028);
+  --section-title-color: var(--color-black-second, #353430);
   --link-color: var(--color-black-second, #353430);
   --decorated-zone-color: var(--color-black-second, #353430);
 
