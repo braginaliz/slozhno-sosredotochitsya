@@ -1,8 +1,10 @@
 .page {
   background-color: var(--page-background-color, #fff1f7);
   color: var(--text-color, #353430);
-  background-image: var(--page-background-image,
-      url(../images/cover-image.png));
+  background-image: var(
+    --page-background-image,
+    url(../images/cover-image.png)
+  );
   font-size: 18px;
   line-height: 23.4px;
   font-family: var(--font-family, "IBM Plex mono", monospace);
@@ -33,7 +35,6 @@
 .header__theme-menu {
   justify-self: center;
 }
-
 
 .header__theme-menu-list {
   display: flex;
@@ -98,8 +99,6 @@
   border-bottom: 1px solid var(--menu-focus-color, #353430);
 }
 
-
-
 .record-decor {
   position: absolute;
   visibility: var(--record-decor-visibility, hidden);
@@ -141,7 +140,6 @@
   justify-self: start;
   color: var(--decoration-color);
   text-shadow: 4px 4px 0px var(--accent-color, #ff0070);
-
 }
 
 .description_title {
@@ -152,11 +150,8 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 23px;
   justify-self: end;
   font-family: var(--font-family, "IBM Plex mono", monospace);
-  font-size: 18px;
-  font-weight: 700;
   line-height: 23.4px;
   text-align: left;
   background-color: var(--description-color, #ff8dcb);
@@ -221,10 +216,6 @@
   line-height: 23.4px;
 }
 
-.title-decor {
-  margin-block-end: 20px;
-}
-
 .paragraph_title {
   font-family: var(--font-family, "IBM Plex mono", monospace);
   background-color: var(--description-color, #ff8dcb);
@@ -243,6 +234,11 @@
   text-align: left;
   background-color: var(--description-color, #ff8dcb);
   color: var(--description-title-color);
+}
+
+.title-decor {
+  margin-block-end: 20px;
+  font-weight: 700;
 }
 
 .gallery-list {
@@ -319,11 +315,6 @@
 }
 
 @media (768px <=width < 1024px) {
-  .record-decor {
-    inset-inline-end: 28px;
-    inset-block-start: 20px;
-  }
-
   .header__theme-menu {
     justify-self: end;
     margin-block-start: 0;
@@ -337,14 +328,11 @@
 
   .decoration {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    text-shadow: 4px 4px 0px var(--description-color, #ff8dcb);
     margin-block-end: 10px;
   }
 
   .description_title {
-    justify-self: end;
     inline-size: clamp(360px, calc(100% / 2 - 10px), 364px);
-    text-align: left;
     margin-block-start: 130px;
   }
 
@@ -374,12 +362,10 @@
   .footer_decoration {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     margin: 58%;
-    text-shadow: 2px 2px 0px var(--description-color, #ff8dcb);
   }
 }
 
 @media (375px <= width < 768px) {
-
   .header {
     position: relative;
     display: grid;
@@ -487,123 +473,7 @@
     min-height: 668px;
   }
 
-  .footer_decoration{
+  .footer_decoration {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 }
-
-
-@media (max-width:374px) {
-
-  .header {
-    position: relative;
-    display: grid;
-    grid-template-rows: 1fr auto 1fr auto;
-    gap: 55px;
-    padding: 10px;
-    block-size: max(100vb, 668px);
-  }
-
-  .description_title {
-    inline-size: 355px;
-    margin: 0;
-  }
-
-  .record-decor {
-    gap: 10px;
-    margin-block-start: -10px;
-    margin-inline-end: -10px;
-  }
-
-  .header__theme-menu-list {
-    margin-block-start: 60px;
-    gap: 15px;
-    flex-direction: column;
-  }
-
-  .header__theme-menu {
-    margin-inline-end: 0;
-    justify-self: end;
-  }
-
-  .decoration {
-    justify-self: start;
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    line-height: 85%;
-    margin: 0;
-    margin-block-start: 10px;
-  }
-
-  .main {
-    display: block;
-    padding: 20px 0px 30px;
-  }
-
-  .section {
-    padding: 20px 10px 0px 10px;
-    display: block;
-  }
-
-  .section_list {
-    gap: 0px;
-  }
-
-  .what_section {
-    display: block;
-    margin-block-start: 30px;
-  }
-
-  .what_section_list {
-    display: block;
-  }
-
-  .what_title {
-    width: 100%;
-  }
-
-  .how_section {
-    margin-block-start: 30px;
-  }
-
-  .what_paragraph_content {
-    padding-bottom: 0px;
-  }
-
-  .paragraph_title {
-    margin-top: 20px;
-  }
-
-  .section_list-advices {
-    display: grid;
-    gap: 20px;
-  }
-
-  .title-decor {
-    margin-top: 20px;
-  }
-
-  .paragraph_title_pictures {
-    margin: 50px 10px 0;
-  }
-
-  .gallery-list {
-    margin: 10px;
-    display: block;
-  }
-
-  .gallery-list__item:nth-child(2),
-  .gallery-list__item:nth-child(3),
-  .gallery-list__item:nth-child(4),
-  .gallery-list__item:nth-child(5) {
-    padding-top: 10px;
-  }
-
-  .footer {
-    min-height: 668px;
-  }
-
-  .footer_decoration{
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  }
-}
-
